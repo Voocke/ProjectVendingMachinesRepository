@@ -19,7 +19,6 @@
             <PasswordBox x:Name="PassBox"  Margin="0 0 0 40"/>
 
             <Button Content="Войти" Click="Login_Click" Height="40" Background="White" Margin="0 0 0 10"/>
-            <Button Content="Зарегистрироваться" Height="40" Click="Registration_Click" Background="White"/>
 
         </StackPanel>
     </Grid>

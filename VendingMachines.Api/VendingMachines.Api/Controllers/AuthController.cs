@@ -25,11 +25,28 @@ namespace VendingMachines.Api.Controllers
         [HttpGet("me")]
         public IActionResult Me()
         {
-            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-            var email = User.FindFirstValue(ClaimTypes.Email);
-            var role = User.FindFirstValue(ClaimTypes.Role);
+            var userIdStr = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            if (string.IsNullOrWhiteSpace(userIdStr))
+                return Unauthorized();
 
-            return Ok(new { userId, email, role });
+            int userId = int.Parse(userIdStr);
+
+            // 2. Берём пользователя из БД
+            var user = _db.Users
+                .Include(u => u.Role)
+                .FirstOrDefault(u => u.UserId == userId);
+
+            if (user == null)
+                return Unauthorized();
+
+            // 3. Возвращаем данные
+            return Ok(new
+            {
+                userId = user.UserId,
+                name = user.FullName,
+                email = user.Email,
+                role = user.Role?.RoleName
+            });
         }
 
         [HttpPost("login")]

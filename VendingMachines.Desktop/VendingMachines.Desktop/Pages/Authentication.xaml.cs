@@ -20,6 +20,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VendingMachines.Desktop.Services;
 
 namespace VendingMachines.Desktop.Pages
 {
@@ -87,18 +88,14 @@ namespace VendingMachines.Desktop.Pages
 
                     AppData.Token = token;
                 }
-
+                
                 this.NavigationService.Navigate(new Pages.Main());
+
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Ошибка подключения: " + ex.Message, "ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
             }
-        }
-
-        private void Registration_Click(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }
