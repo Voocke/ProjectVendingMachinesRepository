@@ -1,18 +1,59 @@
 <script setup>
+import {ref, computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
+const currentLang = ref('ru')
+
+// 2. Создаем словарь прямо здесь
+const messages = {
+  ru: {
+    dashboard: 'Дашборд',
+    machines: 'ТА (Аппараты)',
+    calendar: 'Календарь ТО',
+    schedule: 'График работ',
+    reports: 'Отчеты',
+    login: 'Вход',
+    logout: 'Выход',
+    switchLang: 'Switch to English' // Текст на кнопке
+  },
+  en: {
+    dashboard: 'Dashboard',
+    machines: 'Vending Machines',
+    calendar: 'Maintenance Calendar',
+    schedule: 'Work Schedule',
+    reports: 'Reports',
+    login: 'Login',
+    logout: 'Logout',
+    switchLang: 'Переключить на Русский'
+  }
+}
+
+// 3. Вычисляем текущий текст
+const text = computed(() => {
+  return messages[currentLang.value]
+})
+
+// 4. Функция переключения
+const toggleLang = () => {
+  currentLang.value = currentLang.value === 'ru' ? 'en' : 'ru'
+  console.log("Язык изменен на:", currentLang.value)
+}
 </script>
 
 <template>
   <div class="app-container">
     <nav class="sidebar">
       <div class="logo">Vending System</div>
-      
-      <RouterLink to="/dashboard">📊 Дашборд</RouterLink>
-      <RouterLink to="/machines">🤖 ТА (Аппараты)</RouterLink>
-      <RouterLink to="/calendar">📅 Календарь ТО</RouterLink>
-      <RouterLink to="/schedule">👷 График работ</RouterLink>
-      <RouterLink to="/reports">📑 Отчеты</RouterLink>
-      <RouterLink to="/login" class="logout">🚪 Выход</RouterLink>
+
+      <button class="lang-btn" @click="toggleLang">
+        {{ text.switchLang }}
+      </button>
+
+      <RouterLink to="/dashboard">📊 {{ text.dashboard }}</RouterLink>
+      <RouterLink to="/machines">🤖 {{ text.machines }}</RouterLink>
+      <RouterLink to="/calendar">📅 {{ text.calendar }}</RouterLink>
+      <RouterLink to="/schedule">👷 {{ text.schedule }}</RouterLink>
+      <RouterLink to="/reports">📑 {{ text.reports }}</RouterLink>
+      <RouterLink to="/login" class="logout">🚪 {{ text.logout }}</RouterLink>
     </nav>
 
     <main class="content">
@@ -21,12 +62,27 @@ import { RouterLink, RouterView } from 'vue-router'
   </div>
 </template>
 
-<style scoped>
+<style>
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: white;
+  padding: 8px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 /* Простой CSS, ты его знаешь */
 .app-container {
   display: flex;
   height: 100vh; /* На весь экран */
   font-family: Arial, sans-serif;
+}
+
+.page h1 {
+  color: #040c13; /* Темно-синий цвет, хорошо видно */
 }
 
 .sidebar {
