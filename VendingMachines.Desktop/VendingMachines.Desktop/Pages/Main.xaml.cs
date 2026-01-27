@@ -23,16 +23,10 @@ namespace VendingMachines.Desktop.Pages
     /// </summary>
     public partial class Main : Page
     {
+        private JsonElement _me;
         public Main()
         {
             InitializeComponent();
-            //MessageBox.Show("TOKEN=" + ApiService.Token);
-            //var me = Services.ApiService.Get<JsonDocument>("/api/auth/me").RootElement;
-
-            //var name = me.GetProperty("name").GetString();
-            //var role = me.GetProperty("role").GetString();
-
-            //MessageBox.Show($"Здравствуйте, {name}, вы вошли под ролью {role}!");
         }
     }
 }

@@ -54,8 +54,7 @@
               "RelativeToolTip": "VendingMachines.Api\\Controllers\\VendingMachinesController.cs",
               "ViewState": "AgIAAGEAAAAAAAAAAAAcwBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T10:14:50.583Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T10:14:50.583Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "VendingMachines.Api\\Program.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-16T18:53:20.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T18:53:20.922Z"
             },
             {
               "$type": "Document",
@@ -76,9 +74,9 @@
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Api\\VendingMachines.Api\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "VendingMachines.Api\\Controllers\\AuthController.cs",
-              "ToolTip": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Api\\VendingMachines.Api\\Controllers\\AuthController.cs*",
-              "RelativeToolTip": "VendingMachines.Api\\Controllers\\AuthController.cs*",
-              "ViewState": "AgIAABIAAAAAAAAAAAAqwC4AAAAjAAAAAAAAAA==",
+              "ToolTip": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Api\\VendingMachines.Api\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "VendingMachines.Api\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwC4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T09:05:41.024Z",
               "EditorCaption": ""
@@ -93,8 +91,7 @@
               "RelativeToolTip": "VendingMachines.Api\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T10:11:14.404Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T10:11:14.404Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "VendingMachines.Api\\Data\\AppDbContext.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T09:43:01.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T09:43:01.145Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "VendingMachines.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-01-16T21:12:43.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-16T21:12:43.947Z"
             },
             {
               "$type": "Document",
@@ -132,8 +127,7 @@
               "RelativeToolTip": "VendingMachines.Api\\Services\\JwtTokenService.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAgwBYAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-18T20:56:35.774Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-18T20:56:35.774Z"
             },
             {
               "$type": "Document",

@@ -42,3 +42,5 @@ D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.
 D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.Desktop\bin\Debug\LiveCharts.xml
 D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.Desktop\bin\Debug\LiveCharts.Wpf.pdb
 D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.Desktop\bin\Debug\LiveCharts.Wpf.xml
+D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.Desktop\obj\Debug\Pages\MonitorTA.g.cs
+D:\professionals\ProjectVendingMachines\VendingMachines.Desktop\VendingMachines.Desktop\obj\Debug\Pages\MonitorTA.baml

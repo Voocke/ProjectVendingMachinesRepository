@@ -3,15 +3,15 @@
   "WorkspaceRootPath": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|d:\\professionals\\projectvendingmachines\\vendingmachines.desktop\\vendingmachines.desktop\\pages\\main.xaml||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\pages\\main.xaml||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|d:\\professionals\\projectvendingmachines\\vendingmachines.desktop\\vendingmachines.desktop\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\pages\\main.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|d:\\professionals\\projectvendingmachines\\vendingmachines.desktop\\vendingmachines.desktop\\pages\\monitorta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\vendingmachines.desktop\\pages\\main.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\pages\\main.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\vendingmachines.desktop\\pages\\monitorta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\pages\\monitorta.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -19,11 +19,7 @@
       "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|d:\\professionals\\projectvendingmachines\\vendingmachines.desktop\\vendingmachines.desktop\\pages\\main.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\pages\\main.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|d:\\professionals\\projectvendingmachines\\vendingmachines.desktop\\vendingmachines.desktop\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\vendingmachines.desktop\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F1C4602-E875-48F5-A3F9-47C871DCE92F}|VendingMachines.Desktop\\VendingMachines.Desktop.csproj|solutionrelative:vendingmachines.desktop\\services\\apiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -45,12 +41,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedHeight": 183,
+          "DockedHeight": 308,
           "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "Main.xaml",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Main.xaml",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\Pages\\Main.xaml",
@@ -74,7 +70,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "ApiService.cs",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Services\\ApiService.cs",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\Services\\ApiService.cs",
@@ -82,25 +78,24 @@
               "RelativeToolTip": "VendingMachines.Desktop\\Services\\ApiService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-27T10:27:38.938Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-27T10:27:38.938Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Main.xaml.cs",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Main.xaml.cs",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\Pages\\Main.xaml.cs",
               "ToolTip": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Main.xaml.cs",
               "RelativeToolTip": "VendingMachines.Desktop\\Pages\\Main.xaml.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAYwCIAAABTAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBwAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-01-19T16:40:18.357Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "Authentication.xaml.cs",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Authentication.xaml.cs",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\Pages\\Authentication.xaml.cs",
@@ -108,24 +103,22 @@
               "RelativeToolTip": "VendingMachines.Desktop\\Pages\\Authentication.xaml.cs",
               "ViewState": "AgIAAEUAAAAAAAAAAAAowFoAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T14:49:02.981Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T14:49:02.981Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "Authentication.xaml",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Authentication.xaml",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\Pages\\Authentication.xaml",
               "ToolTip": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Authentication.xaml",
               "RelativeToolTip": "VendingMachines.Desktop\\Pages\\Authentication.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-19T14:48:10.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T14:48:10.837Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "AppData.cs",
               "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\AppData.cs",
               "RelativeDocumentMoniker": "VendingMachines.Desktop\\AppData.cs",
@@ -145,27 +138,7 @@
               "RelativeToolTip": "VendingMachines.Desktop\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAwwBgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-19T14:43:51.475Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedHeight": 183,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Main.xaml",
-              "DocumentMoniker": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Main.xaml",
-              "RelativeDocumentMoniker": "VendingMachines.Desktop\\Pages\\Main.xaml",
-              "ToolTip": "D:\\professionals\\ProjectVendingMachines\\VendingMachines.Desktop\\VendingMachines.Desktop\\Pages\\Main.xaml",
-              "RelativeToolTip": "VendingMachines.Desktop\\Pages\\Main.xaml",
-              "ViewState": "AgIAAGIAAAAAAAAAAIAwwHEAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2026-01-27T11:41:07.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-19T14:43:51.475Z"
             }
           ]
         }
