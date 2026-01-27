@@ -1,85 +1,79 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="app-container">
+    <nav class="sidebar">
+      <div class="logo">Vending System</div>
+      
+      <RouterLink to="/dashboard">📊 Дашборд</RouterLink>
+      <RouterLink to="/machines">🤖 ТА (Аппараты)</RouterLink>
+      <RouterLink to="/calendar">📅 Календарь ТО</RouterLink>
+      <RouterLink to="/schedule">👷 График работ</RouterLink>
+      <RouterLink to="/reports">📑 Отчеты</RouterLink>
+      <RouterLink to="/login" class="logout">🚪 Выход</RouterLink>
+    </nav>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+    <main class="content">
+      <RouterView />
+    </main>
+  </div>
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
-  max-height: 100vh;
+/* Простой CSS, ты его знаешь */
+.app-container {
+  display: flex;
+  height: 100vh; /* На весь экран */
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
   text-align: center;
-  margin-top: 2rem;
 }
 
-nav a.router-link-exact-active {
-  color: var(--color-text);
+/* Ссылки меню */
+a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
 }
 
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
+a:hover {
+  background-color: #42b983;
 }
 
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
+/* Подсветка активной страницы (Router сам добавляет этот класс) */
+.router-link-active {
+  background-color: #42b983;
+  font-weight: bold;
 }
 
-nav a:first-of-type {
-  border: 0;
+.logout {
+  margin-top: auto; /* Прижать кнопку выхода к низу */
+  background-color: #c0392b;
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
+.content {
+  flex-grow: 1; /* Занимает всё оставшееся место */
+  padding: 20px;
+  background-color: #f4f4f4;
+  overflow-y: auto; /* Прокрутка, если контента много */
 }
 </style>
