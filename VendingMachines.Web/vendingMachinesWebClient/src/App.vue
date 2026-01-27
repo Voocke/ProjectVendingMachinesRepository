@@ -1,9 +1,13 @@
 <script setup>
-import {ref, computed } from 'vue'
-import { RouterLink, RouterView } from 'vue-router'
+import { ref, computed } from 'vue'
+import { RouterLink, RouterView, useRouter } from 'vue-router'
+// Импорт нашего простого store
+import { authState } from './stores/auth.js'
+
+// Создаем роутер
+const router = useRouter()
 const currentLang = ref('ru')
 
-// 2. Создаем словарь прямо здесь
 const messages = {
   ru: {
     dashboard: 'Дашборд',
@@ -13,7 +17,7 @@ const messages = {
     reports: 'Отчеты',
     login: 'Вход',
     logout: 'Выход',
-    switchLang: 'Switch to English' // Текст на кнопке
+    switchLang: 'Switch to English'
   },
   en: {
     dashboard: 'Dashboard',
@@ -27,15 +31,22 @@ const messages = {
   }
 }
 
-// 3. Вычисляем текущий текст
-const text = computed(() => {
-  return messages[currentLang.value]
+// Тексты
+const text = computed(() => messages[currentLang.value])
+
+// ПРОВЕРКА АВТОРИЗАЦИИ
+// Создаем вычисляемую переменную. Если токен есть — вернет true.
+const isAuth = computed(() => {
+  return !!authState.token.value // Двойное отрицание превращает строку/null в true/false
 })
 
-// 4. Функция переключения
 const toggleLang = () => {
   currentLang.value = currentLang.value === 'ru' ? 'en' : 'ru'
-  console.log("Язык изменен на:", currentLang.value)
+}
+
+const handleLogout = () => {
+  authState.logout()
+  router.push('/login')
 }
 </script>
 
@@ -48,12 +59,21 @@ const toggleLang = () => {
         {{ text.switchLang }}
       </button>
 
-      <RouterLink to="/dashboard">📊 {{ text.dashboard }}</RouterLink>
-      <RouterLink to="/machines">🤖 {{ text.machines }}</RouterLink>
-      <RouterLink to="/calendar">📅 {{ text.calendar }}</RouterLink>
-      <RouterLink to="/schedule">👷 {{ text.schedule }}</RouterLink>
-      <RouterLink to="/reports">📑 {{ text.reports }}</RouterLink>
-      <RouterLink to="/login" class="logout">🚪 {{ text.logout }}</RouterLink>
+      <div v-show="isAuth" class="menu-items">
+        <RouterLink to="/dashboard">📊 {{ text.dashboard }}</RouterLink>
+        <RouterLink to="/machines">🤖 {{ text.machines }}</RouterLink>
+        <RouterLink to="/calendar">📅 {{ text.calendar }}</RouterLink>
+        <RouterLink to="/schedule">👷 {{ text.schedule }}</RouterLink>
+        <RouterLink to="/reports">📑 {{ text.reports }}</RouterLink>
+        
+        <button @click="handleLogout" class="logout-btn">
+          🚪 {{ text.logout }}
+        </button>
+      </div>
+      
+      <div v-show="!isAuth" class="guest-msg">
+        <p>Система управления</p>
+      </div>
     </nav>
 
     <main class="content">
@@ -63,7 +83,7 @@ const toggleLang = () => {
 </template>
 
 <style>
-
+/* Твои стили без изменений */
 .lang-btn {
   background: transparent;
   border: 1px solid rgba(255,255,255,0.5);
@@ -72,64 +92,24 @@ const toggleLang = () => {
   margin-bottom: 20px;
   cursor: pointer;
   border-radius: 5px;
+  width: 100%;
 }
-
-/* Простой CSS, ты его знаешь */
-.app-container {
-  display: flex;
-  height: 100vh; /* На весь экран */
-  font-family: Arial, sans-serif;
-}
-
-.page h1 {
-  color: #040c13; /* Темно-синий цвет, хорошо видно */
-}
-
-.sidebar {
-  width: 250px;
-  background-color: #2c3e50;
-  color: white;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-}
-
-.logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* Ссылки меню */
-a {
-  color: white;
-  text-decoration: none;
-  padding: 10px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
-a:hover {
-  background-color: #42b983;
-}
-
-/* Подсветка активной страницы (Router сам добавляет этот класс) */
-.router-link-active {
-  background-color: #42b983;
-  font-weight: bold;
-}
-
-.logout {
-  margin-top: auto; /* Прижать кнопку выхода к низу */
-  background-color: #c0392b;
-}
-
+.app-container { display: flex; height: 100vh; font-family: Arial, sans-serif; }
+.sidebar { width: 250px; background-color: #2c3e50; color: white; padding: 20px; display: flex; flex-direction: column; }
+.logo { font-size: 20px; font-weight: bold; margin-bottom: 30px; text-align: center; }
+a { display: block; color: white; text-decoration: none; padding: 10px; margin-bottom: 5px; border-radius: 5px; transition: 0.3s; }
+a:hover { background-color: #42b983; }
+.router-link-active { background-color: #42b983; font-weight: bold; }
+.logout-btn { width: 100%; text-align: left; background-color: #c0392b; color: white; border: none; padding: 10px; margin-top: 20px; border-radius: 5px; cursor: pointer; font-size: 16px; font-family: Arial, sans-serif; }
+.logout-btn:hover { background-color: #a93226; }
 .content {
-  flex-grow: 1; /* Занимает всё оставшееся место */
+  flex-grow: 1;
   padding: 20px;
   background-color: #f4f4f4;
-  overflow-y: auto; /* Прокрутка, если контента много */
+  overflow-y: auto;
+
+  /* --- ДОБАВЬ ВОТ ЭТУ СТРОКУ --- */
+  color: #2c3e50; /* Темно-синий (почти черный) цвет для всего текста */
 }
+.guest-msg { text-align: center; color: #bdc3c7; font-size: 14px; margin-top: 50px; }
 </style>

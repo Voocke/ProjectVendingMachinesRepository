@@ -11,6 +11,16 @@ builder.Services.AddControllers();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("VendingDb")));
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVueApp",
+        policy =>
+        {
+            policy.WithOrigins("http://localhost:5173") // <-- Адрес твоего Vue сайта
+                  .AllowAnyHeader()
+                  .AllowAnyMethod();
+        });
+});
 // JWT
 var jwtSection = builder.Configuration.GetSection("Jwt");
 var key = Encoding.UTF8.GetBytes(jwtSection["Key"]!);
@@ -39,6 +49,7 @@ var app = builder.Build();
 
 // Единый формат ошибок (коротко и полезно)
 //app.UseMiddleware<ApiExceptionMiddleware>();
+app.UseCors("AllowVueApp");
 
 app.UseAuthentication();
 app.UseAuthorization();

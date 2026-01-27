@@ -12,7 +12,7 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard'
+      redirect: '/login'
     },
     {
       path: '/login',
@@ -22,29 +22,46 @@ const router = createRouter({
     {
       path: '/dashboard',
       name: 'dashboard',
-      component: DashboardView
+      component: DashboardView,
+      meta: { requiresAuth: true } 
     },
     {
       path: '/machines',
       name: 'machines',
-      component: MachinesView
+      component: MachinesView,
+      meta: { requiresAuth: true } 
     },
     {
       path: '/calendar',
       name: 'calendar',
-      component: CalendarView
+      component: CalendarView,
+      meta: { requiresAuth: true }
     },
     {
       path: '/schedule',
       name: 'schedule',
-      component: ScheduleView
+      component: ScheduleView,
+      meta: { requiresAuth: true }
     },
     {
       path: '/reports',
       name: 'reports',
-      component: ReportsView
+      component: ReportsView,
+      meta: { requiresAuth: true }
     }
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  // Проверяем, есть ли токен в кармане
+  const isAuthenticated = localStorage.getItem('token')
+
+  // Если страница требует авторизации (meta.requiresAuth), а токена нет
+  if (to.meta.requiresAuth && !isAuthenticated) {
+    next('/login') // Пшел вон на логин
+  } else {
+    next() // Проходи
+  }
 })
 
 export default router
